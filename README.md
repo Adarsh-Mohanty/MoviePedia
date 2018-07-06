@@ -4,3 +4,5 @@ This is the web version for the moviepedia bot originally available on google as
 # About
 This bot can provide any information about any movie you ask it.
 
+# Live
+https://adarsh-mohanty.github.io/MoviePedia/
