@@ -1,0 +1,78 @@
+@font-face {
+		   font-family: opensans;
+		   src: url(fonts/OpenSans-Regular.ttf);
+		}
+@font-face {
+   font-family: amatic;
+   src: url(fonts/Amatic-Bold.ttf);
+}
+
+* {
+	font-family: opensans;
+}
+
+.welcome-elements{
+	text-align: center;
+	transition: all 0.5s cubic-bezier(0.25, 0.1, 0.7, 0.55);
+    /* height: 199px; */
+    /* position: relative; */
+    display: -webkit-box;
+}
+.main{
+	background: linear-gradient(137deg, #33973d, #393771, #510951);
+background-size: 600% 600%;
+
+-webkit-animation: backgroundAnimation 30s ease infinite;
+-moz-animation: backgroundAnimation 30s ease infinite;
+animation: backgroundAnimation 30s ease infinite;
+
+    height: 100%;
+    position: absolute;	
+    overflow: hidden;
+
+}
+@-webkit-keyframes backgroundAnimation {
+    0%{background-position:27% 0%}
+    50%{background-position:74% 100%}
+    100%{background-position:27% 0%}
+}
+@-moz-keyframes backgroundAnimation {
+    0%{background-position:27% 0%}
+    50%{background-position:74% 100%}
+    100%{background-position:27% 0%}
+}
+@keyframes backgroundAnimation { 
+    0%{background-position:27% 0%}
+    50%{background-position:74% 100%}
+    100%{background-position:27% 0%}
+}
+.welcome-elements{
+	position:relative;
+	display: block;
+	height: 100%;
+	color: white;
+	
+}
+.seq{
+	display: none;
+
+}
+#seq1{
+	position: absolute;
+    width: 100%;
+    top: 45%;
+    transition: all 0.7s ease;
+    font-family: "amatic";
+    letter-spacing: 5px;
+
+}
+#frame{
+	    border: none;
+    box-shadow: 0 0 80px 4px;
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    top: 50%;
+     max-width: 90%;
+}

@@ -1,0 +1,57 @@
+<!doctype HTML>
+<html>
+<head>
+	 <meta charset="utf-8"> 
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+	<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"  crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+	<style>
+		@import url(style.css);
+	</style>
+</head>
+<body>
+	<div class="container-fluid centered col-md-12 main">
+		<div class="welcome-elements">
+			<h1 class="display-1 " id="seq1">MOVIEPEDIA</h1>
+			
+		</div>
+		<iframe  id="frame"  width="350"    height="430"    src="https://console.dialogflow.com/api-client/demo/embedded/b0b6b64c-f9f4-4116-bed5-cf8c08bd8ee8">
+		</iframe>
+		
+	</div>
+	<script type="text/javascript">
+		var animationEnd = (function(el) {
+			  var animations = {
+			    animation: 'animationend',
+			    OAnimation: 'oAnimationEnd',
+			    MozAnimation: 'mozAnimationEnd',
+			    WebkitAnimation: 'webkitAnimationEnd',
+			  };
+
+			  for (var t in animations) {
+			    if (el.style[t] !== undefined) {
+			      return animations[t];
+			    }
+			  }
+			})(document.createElement('div'));
+		$(function(){
+			$('#seq1').addClass('animated rotateIn').one(animationEnd, function(){
+				setTimeout("$('#seq1').removeClass('animated rotateIn').addClass('animated rubberBand');",500);
+				setTimeout("$('.welcome-elements').css('height','0');",1700);
+				setTimeout("$('#seq1').css('font-size','72px');",1700);
+				setTimeout("$('#frame').css('display','block');",2000);
+				setTimeout("$('#frame').addClass('animated zoomIn');",2000);
+				
+			});
+
+
+			
+		});
+		
+
+	</script>
+</body>
+</html>
